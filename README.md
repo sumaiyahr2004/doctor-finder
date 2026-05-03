@@ -34,6 +34,6 @@ doctor-finder/
 ```
 
 
-Please note: 
+## Additional Notes
 - Doctor data is currently stored in memory, so additions and edits will reset when the server restarts.
 - A database integration (SQLite or PostgreSQL) would be the next step for persistent storage.
