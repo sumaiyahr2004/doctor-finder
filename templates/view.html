@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+
+  <div class="col-md-4">
+      <img src="{{doctor.image}}" class="img-fluid"
+      alt="Photo of {{doctor.name}}">
+  </div>
+
+  <div class="col-md-8">
+      <h1 class="fw-bold mb-1">{{doctor.name}}</h1>
+      <h4><a href="/search?q={{doctor.specialty}}" class="text-decoration-none">{{doctor.specialty}}</a></h4>
+      <a href="/edit/{{doctor.id}}" class="btn btn-sm 
+btn-outline-secondary btn-accent mb-2">Edit</a>
+
+      <hr>
+
+      <div class="row">
+
+          <div class="col-md-6">
+              <h4 class="fw-bold">Medical Background</h4>
+              <p><b>Conditions:</b> {{doctor.conditions}}</p>
+              <p><b>Experience:</b> {{doctor.experience}} years</p>
+              <p><b>Education:</b> {{doctor.education}}</p>
+          </div>
+
+          <div class="col-md-6">
+              <h4 class="fw-bold">Visit Information</h4>
+              <p><b>Insurance:</b> {{doctor.insurance}}</p>
+              <p><b>Location:</b> {{doctor.location}}</p>
+              <p><b>Phone:</b> {{doctor.phone}}</p>
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+{% endblock %}

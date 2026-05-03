@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Edit Doctor</h2>
+
+<input id="id" type="hidden" value="{{doctor.id}}">
+
+<label for="name">Name</label>
+<input id="name" class="form-control mb-2" value="{{doctor.name}}">
+
+<label for="specialty">Specialty</label>
+<input id="specialty" class="form-control mb-2" 
+value="{{doctor.specialty}}">
+
+<label for="conditions">Conditions</label>
+<input id="conditions" class="form-control mb-2" 
+value="{{doctor.conditions}}">
+
+<label for="experience">Years Experience</label>
+<input id="experience" class="form-control mb-2" 
+value="{{doctor.experience}}">
+
+<label for="education">Education</label>
+<input id="education" class="form-control mb-2" 
+value="{{doctor.education}}">
+
+<label for="insurance">Insurance</label>
+<input id="insurance" class="form-control mb-2" 
+value="{{doctor.insurance}}">
+
+<label for="location">Location</label>
+<input id="location" class="form-control mb-2" 
+value="{{doctor.location}}">
+
+<label for="phone">Phone</label>
+<input id="phone" class="form-control mb-2" value="{{doctor.phone}}">
+
+<label for="image">Image URL</label>
+<input id="image" class="form-control mb-2" value="{{doctor.image}}">
+
+<button onclick="updateDoctor()" class="btn btn-primary">Submit</button>
+
+<button onclick="discard()" class="btn btn-secondary">Discard Changes</button>
+
+{% endblock %}

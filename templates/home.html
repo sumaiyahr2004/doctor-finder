@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Find the Right Doctor</h1>
+
+<p>Browse specialists and discover healthcare providers that match your 
+needs.</p>
+
+<div class="row">
+
+{% for doctor in doctors %}
+
+<div class="col-md-4">
+
+<div class="card">
+
+<a href="/view/{{doctor.id}}">
+<img src="{{doctor.image}}" class="card-img-top"
+alt="Photo of doctor profile">
+</a>
+
+<div class="card-body">
+
+<h5>{{doctor.name}}</h5>
+
+<p>{{doctor.specialty}}</p>
+
+<p>{{doctor.conditions}}</p>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

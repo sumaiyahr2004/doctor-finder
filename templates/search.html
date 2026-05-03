@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Search Results for "{{query}}"</h2>
+
+<p>{{count}} results found</p>
+
+{% if count == 0 %}
+
+<p>No matches found</p>
+
+{% endif %}
+
+<div class="row">
+
+{% for doctor in results %}
+
+<div class="col-md-4">
+
+<div class="card">
+
+<a href="/view/{{doctor.id}}">
+<img src="{{doctor.image}}" class="card-img-top"
+alt="Doctor profile picture">
+</a>
+
+<div class="card-body">
+
+<h5>{{doctor.name | safe}}</h5>
+
+<p>{{doctor.specialty | safe}}</p>
+
+<p>{{doctor.conditions | safe}}</p>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
+

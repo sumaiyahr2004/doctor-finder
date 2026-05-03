@@ -1,1 +1,44 @@
+{% extends "layout.html" %}
 
+{% block content %}
+
+<h2>Add New Doctor</h2>
+
+<div id="success" class="alert alert-success" style="display:none"></div>
+
+<label for="name">Name</label>
+<input id="name" class="form-control mb-2">
+<div id="name_error" class="error-message"></div>
+
+<label for="specialty">Specialty</label>
+<input id="specialty" class="form-control mb-2">
+<div id="specialty_error" class="error-message"></div>
+
+<label for="conditions">Conditions</label>
+<input id="conditions" class="form-control mb-2">
+<div id="conditions_error" class="error-message"></div>
+
+<label for="experience">Years Experience</label>
+<input id="experience" class="form-control mb-2">
+<div id="experience_error" class="error-message"></div>
+
+<label for="education">Education</label>
+<input id="education" class="form-control mb-2">
+<div id="education_error" class="error-message"></div>
+
+<label for="insurance">Insurance</label>
+<input id="insurance" class="form-control mb-2">
+<div id="insurance_error" class="error-message"></div>
+
+<label for="location">Location</label>
+<input id="location" class="form-control mb-2">
+<div id="location_error" class="error-message"></div>
+
+<label for="phone">Phone</label>
+<input id="phone" class="form-control mb-2">
+<div id="phone_error" class="error-message"></div>
+
+<button type="button" id="submitDoctor" class="btn 
+btn-accent">Submit</button>
+
+{% endblock %}
